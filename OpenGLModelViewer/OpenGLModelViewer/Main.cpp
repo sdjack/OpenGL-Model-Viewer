@@ -31,7 +31,7 @@
 #include <opengl/Camera.h>
 #include <opengl/Model.h>
 #include <opengl/FileSystem.h>
-#include <OpenGLModelViewer.h>
+#include <ModelLoader.h>
 
 static void glfw_error_callback(int error, const char* description)
 {
@@ -99,7 +99,7 @@ int main(int, char**)
 #endif
 
 	// Load debug window
-	OpenGLModelViewer::InitDebugConsole();
+	ModelLoader::InitDebugConsole();
 
 	// Create window with graphics context
 	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LiveCam FIlter Viewer", NULL, NULL);
@@ -409,7 +409,7 @@ int main(int, char**)
 void loadNewModel()
 {
 	camera.Reset();
-	modelPath = OpenGLModelViewer::openfilename();
+	modelPath = ModelLoader::openfilename();
 	previewModel.Load(modelPath);
 }
 

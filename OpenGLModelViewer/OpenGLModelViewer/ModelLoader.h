@@ -60,7 +60,7 @@ void APIENTRY glDebugOutput(GLenum source,
 	std::cout << std::endl;
 }
 
-class OpenGLModelViewer
+class ModelLoader
 {
 public:
 	// Returns an empty string if dialog is canceled
